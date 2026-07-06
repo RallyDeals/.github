@@ -1,0 +1,94 @@
+name: Bug Report
+description: Report a defect in an existing feature or service
+title: "[Bug]: "
+labels: ["bug"]
+projects: ["RallyPlatform/2"]
+body:
+  - type: dropdown
+    id: service
+    attributes:
+      label: Affected Service
+      description: Where does the bug manifest? (Not necessarily where the root cause is)
+      options:
+        - Frontend
+        - API Gateway
+        - Auth Service
+        - Catalog Service
+        - Deal Service
+        - Participation Service
+        - Scheduler Service
+        - Order Service
+        - Payment Service
+        - Notification Service
+        - Event Bus / Async flow
+        - Not sure
+    validations:
+      required: true
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: A clear, concise description of the bug.
+      placeholder: "e.g. Participant count on the deal page doesn't update after joining, even though participant.joined was published."
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      placeholder: "What should have happened instead?"
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      value: |
+        1.
+        2.
+        3.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity
+      options:
+        - S0 - Critical (production down / data loss / payment issue)
+        - S1 - High (core flow broken, no workaround)
+        - S2 - Medium (broken but has a workaround)
+        - S3 - Low (cosmetic / minor)
+    validations:
+      required: true
+
+  - type: dropdown
+    id: environment
+    attributes:
+      label: Environment
+      options:
+        - Production
+        - Staging
+        - Local / Dev
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant logs, request IDs, or event payloads
+      description: Paste any error logs, correlation/trace IDs, or the Kafka/RabbitMQ event payload involved. This will be formatted as code automatically.
+      render: shell
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional context
+      description: Screenshots, related issues, or anything else useful for triage.
+    validations:
+      required: false

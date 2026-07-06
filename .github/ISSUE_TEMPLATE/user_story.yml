@@ -1,0 +1,61 @@
+name: User Story
+description: A backlog item for a feature or user-facing capability
+title: "[Story]: "
+labels: ["user-story"]
+projects: ["RallyPlatform/2"]
+body:
+  - type: input
+    id: as-a
+    attributes:
+      label: As a
+      placeholder: "e.g. Customer"
+    validations:
+      required: true
+
+  - type: input
+    id: i-want
+    attributes:
+      label: I want
+      placeholder: "e.g. to join a group deal before it expires"
+    validations:
+      required: true
+
+  - type: input
+    id: so-that
+    attributes:
+      label: So that
+      placeholder: "e.g. I get the discounted price"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      options:
+        - P0 - Critical
+        - P1 - High
+        - P2 - Medium
+        - P3 - Low
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: Acceptance Criteria
+      description: List as checkboxes. Be specific enough that "done" is unambiguous.
+      value: |
+        - [ ]
+        - [ ]
+    validations:
+      required: true
+
+  - type: textarea
+    id: dependencies
+    attributes:
+      label: Dependencies / Related services
+      description: Any other service, event, or endpoint this story depends on (e.g. "requires deal.target_reached event from Deal Service")
+      placeholder: "e.g. depends on Order Service publishing order.created"
+    validations:
+      required: false

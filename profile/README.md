@@ -1,0 +1,2 @@
+# Rally Platform
+An ecommerce with group deal feature, built with Java Spring Boot, Angular, and PostgreSQL. The platform allows users to create and join group deals for various products, enabling them to get better prices through collective purchasing.

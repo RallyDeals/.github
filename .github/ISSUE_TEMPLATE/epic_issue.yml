@@ -1,0 +1,31 @@
+name: Epic
+description: A large cross-service initiative, broken down into stories
+title: "[Epic]: "
+labels: ["epic"]
+body:
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: What is this epic trying to achieve, and why?
+    validations:
+      required: true
+
+  - type: textarea
+    id: services
+    attributes:
+      label: Services involved
+      placeholder: "e.g. Order Service, Deal Service, Payment Service"
+    validations:
+      required: true
+
+  - type: textarea
+    id: success-criteria
+    attributes:
+      label: Success criteria
+      description: How do we know this epic is done?
+      value: |
+        - [ ]
+        - [ ]
+    validations:
+      required: true
