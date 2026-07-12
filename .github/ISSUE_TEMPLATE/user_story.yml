@@ -2,7 +2,7 @@ name: User Story
 description: A backlog item for a feature or user-facing capability
 title: "[Story]: "
 labels: ["user-story"]
-projects: ["RallyPlatform/2"]
+projects: ["RallyDeals/1"]
 body:
   - type: input
     id: as-a
