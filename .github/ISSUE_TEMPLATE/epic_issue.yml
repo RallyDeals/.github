@@ -10,13 +10,24 @@ body:
       description: What is this epic trying to achieve, and why?
     validations:
       required: true
-
+  - type: textarea
+    id: business_value
+    attributes:
+      label: Business Value
+    validations:
+      required: true
+  - type: textarea
+    id: actors
+    attributes:
+      label: Actors
+      description: What is this epic trying to achieve, and why?
+    validations:
+      required: true
   - type: textarea
     id: services
     attributes:
       label: Services involved
       placeholder: "e.g. Order Service, Deal Service, Payment Service"
-
   - type: textarea
     id: success-criteria
     attributes:
