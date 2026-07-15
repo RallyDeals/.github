@@ -47,3 +47,11 @@ body:
       placeholder: "e.g. depends on Order Service publishing order.created"
     validations:
       required: false
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notes
+      description: Any notes needed for this user story to be implemented
+    validations:
+      required: false
